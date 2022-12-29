@@ -434,7 +434,7 @@ body {
     height: 497px;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 480px) {
 
     .container {
         width: 86.9%;
