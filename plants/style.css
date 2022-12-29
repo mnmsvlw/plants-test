@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    min-width: 1440px;
+    /* min-width: 1440px; */
     font-family: Inter;
     min-height: 100vh;
     padding: 0;
@@ -24,6 +24,7 @@ body {
 }
 
 .container {
+    max-width: 1222px;
     width: 85%;
     margin: 0 auto;
     height: 100%;
@@ -165,6 +166,11 @@ body {
     color: #636060;
 }
 
+.about-img-container img {
+    width: 464px; 
+    height: 479px;
+}
+
 .section-service {
     height: 1300px;
     width: 100%;
@@ -193,6 +199,7 @@ body {
     font: 20px Inika;
     line-height: 26.06px;
     margin-right: 37px;
+    min-width: 160px;
 }
 
 .service-item {
@@ -363,6 +370,11 @@ body {
     border: none;
 }
 
+.citysearch {
+    font-size: 20px;
+    line-height: 40px;
+}
+
 .footer {
     font: 16px Inika;
     background-color: #FFF;
@@ -373,6 +385,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: Inter;
 }
 
 .yeargit {
@@ -414,4 +427,321 @@ body {
 
 .search {
     background-color: #AEA1A1;
+}
+
+.womanimg {
+    width: 400px;
+    height: 497px;
+}
+
+@media screen and (max-width: 380px) {
+
+    .container {
+        width: 86.9%;
+    }
+
+    .header {
+        height: 96px;
+    }
+
+    .header-container {
+        height: 100%;
+    }
+
+    .nav {
+        position: fixed;
+        top: 94px;
+        left: 0;
+        max-height: calc(100vh - 94px);
+        width: 100vw;
+    }
+    .nav-list {
+        transform: translateX(-100%);
+        transition: all 0.5s;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0;
+        height: calc(100vh - 94px);
+        width: 100vw;
+        position: fixed;
+        left: 0;
+        top: 94px;
+        right: 0;
+        bottom: 0;
+        background-color: #FFF;
+        overflow-y: scroll;
+    }
+
+    .nav-list.active {
+        transform: translateX(0%);
+    }
+
+    .burger-button {
+        height: 26px;
+        width: 40px;
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .burger-button span {
+        width: 40px;
+        height: 2px;
+        background-color: #717171;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s;
+    }
+
+    .burger-button span:nth-last-of-type(1) {
+        top: 2px;
+    }
+    
+    .burger-button span:nth-last-of-type(2) {
+        top: 9.33px;
+    }
+    
+    .burger-button span:nth-last-of-type(3) {
+        top: 16.59px;
+    }
+    
+    .burger-button span:nth-last-of-type(4) {
+        top: calc(100% - 2.33px);
+    } 
+    
+    .burger-button.active span:nth-last-of-type(2) {
+        top: 50%;
+        transform: translate(-50%, 0%) rotate(45deg);
+    }
+    
+    .burger-button.active span:nth-last-of-type(3) {
+        top: 50%;
+        transform: translate(-50%, 0%) rotate(-45deg);
+    }
+    
+    
+    .burger-button.active span:nth-last-of-type(1) {
+        transform: translate(100%, 50%) rotate(45deg);
+    }
+    
+    .burger-button.active span:nth-last-of-type(4) {
+        transform: translate(-200%, -50%) rotate(-45deg);
+    }
+    
+    .burger-button.active {
+        height: 40px;
+    }
+
+    .section-welcome {
+        height: 300px;
+    }
+
+    .leaf-img-container {
+        display: none;
+    }
+    
+    .welcome-info {
+        height: 100%;
+        justify-content: space-evenly;
+    }
+
+    .welcome-heading {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .welcome-text {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    
+    .welcome-button {
+        font-size: 10px;
+        line-height: 20px;
+        padding: 6px 14px;
+    }
+
+    .section-about {
+        height: 516px;
+    }
+    
+    .about {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-heading {
+        font-size: 25px;
+        line-height: 32.57px;
+        text-align: center;
+    }
+
+    .about-info {
+        justify-content: none;
+        max-height: 312px;
+        gap: 21.55px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .about-text {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .about-img-container img {
+        width: 150px; 
+        height: 147px;
+    }
+
+    .section-service {
+        height: 3150px;
+    }
+
+    .service-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 35px;
+        min-height: 183px;
+    }
+
+    .service-heading {
+        font-size: 25px;
+        line-height: 32.57px;
+        width: 60%;
+    }
+
+    .service-list {
+        flex-direction: column;
+        height: 91%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .service-categories {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        min-height: 79px;
+    }
+
+    .service-button {
+        font-size: 15px;
+        line-height: 19.54px;
+        padding: 6px 24px;
+        min-width: 121px;
+        margin-right: 10px;
+    }
+
+    .forscroll {
+        display: none;
+    }
+
+    .section-prices {
+        height: 512px;
+    }
+
+    .prices {
+        flex-direction: column;
+        /* justify-content: space-around;
+        align-items: center; */
+        padding: 25px 0 40px;
+    }
+
+    .prices-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .contact-us {
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .prices-heading {
+        font-size: 25px;
+        line-height: 30.26px;
+        margin-bottom: 40px;
+    }
+
+    .prices-wrapper {
+        width: 224px;
+        height: 235px;
+        padding: 29px 21px;
+        margin-bottom: 19px;
+    }
+
+    .prices-button {
+        padding: 15px 30px;
+    }
+
+    .prices-plan {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .contact-us-heading {
+        font-size: 20px;
+        line-height: 35px;
+        margin-bottom: 14px;
+        text-align: center;
+    }
+
+    .contact-us-button {
+        font-size: 15px;
+        line-height: 19.54px;
+        margin-bottom: 0;
+        padding: 7px 21px;
+    }
+
+    .imgblock {
+        display: none;
+    }
+
+    .womanimg {
+        width: 100px;
+        height: 124.25px;
+        left: calc(100vw - 100px - 50%);
+    }
+
+    .contacts-heading {
+        padding-top: 25px;
+    }
+
+    .contacts-heading-text {
+        font-size: 25px;
+        line-height: 32.57px;
+    }
+
+    .contacts-content {
+        width: 90%;
+        align-self: center;
+        margin-top: 80px;
+    }
+
+    .citysearch {
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .year {
+        line-height: 24.2px;
+    }
+
+    .gitlink {
+        line-height: 24.2px;
+    }
+
 }
